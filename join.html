@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join as Farmer | Local Farmers Support Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">🌾 Local Farmers Support Portal</div>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="farmers.html">Farmers</a>
+      <a href="produce.html">Produce</a>
+      <a href="order.html">Request</a>
+      <a href="ratings.html">Ratings</a>
+      <a href="join.html" class="active">Join as Farmer</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </div>
+
+  <div class="page-title">
+    <h1>Farmer Corner</h1>
+    <p>Create your farmer profile, then publish your produce for customers.</p>
+  </div>
+
+  <div class="container">
+
+    <h2 class="section-title">Step 1: Create Your Profile</h2>
+    <form class="form-box" action="thanks.html" method="get">
+      <p class="small">After you register, our admin will verify your documents. Only verified farmers are shown on the portal.</p>
+
+      <div class="field">
+        <label for="fname">Full name</label>
+        <input class="input" type="text" id="fname" name="fname" required>
+      </div>
+
+      <div class="field">
+        <label for="fphone">Phone number</label>
+        <input class="input" type="tel" id="fphone" name="fphone" required>
+      </div>
+
+      <div class="field">
+        <label for="village">Village</label>
+        <select class="input" id="village" name="village">
+          <option>Rampur</option>
+          <option>Sundarpur</option>
+          <option>Kishanpura</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="land">Farm size (acres)</label>
+        <input class="input" type="number" id="land" name="land" min="1" required>
+      </div>
+
+      <div class="field">
+        <label for="grows">What do you grow?</label>
+        <input class="input" type="text" id="grows" name="grows" required>
+      </div>
+
+      <div class="field">
+        <label for="about">About your farm</label>
+        <textarea class="input" id="about" name="about"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="proof">ID proof (Aadhaar / Voter ID photo)</label>
+        <input class="input" type="file" id="proof" name="proof">
+      </div>
+
+      <div class="field">
+        <label for="land-doc">Land record (Jamabandi / Khasra)</label>
+        <input class="input" type="file" id="land-doc" name="land-doc">
+      </div>
+
+      <div class="choice">
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">I confirm that I grow what I sell.</label>
+      </div>
+
+      <button class="btn" type="submit">Register</button>
+    </form>
+
+    <h2 class="section-title">Step 2: Publish Your Produce</h2>
+    <form class="form-box" action="thanks.html" method="get">
+
+      <div class="field">
+        <label for="pfarmer">Farmer name</label>
+        <select class="input" id="pfarmer" name="pfarmer">
+          <option>Gurmeet Singh</option>
+          <option>Sunita Devi</option>
+          <option>Harbans Lal</option>
+          <option>Meena Kumari</option>
+          <option>Balwinder Kaur</option>
+          <option>Ravi Kumar</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="pname">Produce name</label>
+        <input class="input" type="text" id="pname" name="pname" required>
+      </div>
+
+      <div class="field">
+        <label for="pcat">Category</label>
+        <select class="input" id="pcat" name="pcat">
+          <option>Vegetables</option>
+          <option>Fruits</option>
+          <option>Grains and Pulses</option>
+          <option>Dairy and More</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="pqty">Quantity available</label>
+        <input class="input" type="number" id="pqty" name="pqty" min="0" required>
+      </div>
+
+      <div class="field">
+        <label for="punit">Unit</label>
+        <select class="input" id="punit" name="punit">
+          <option>kg</option>
+          <option>litre</option>
+          <option>dozen</option>
+          <option>piece</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="pprice">Price per unit (₹)</label>
+        <input class="input" type="number" id="pprice" name="pprice" min="1" required>
+      </div>
+
+      <div class="field">
+        <label>Availability</label>
+        <div class="choice">
+          <input type="radio" id="av-in" name="avail" value="in" checked>
+          <label for="av-in">In Stock</label>
+        </div>
+        <div class="choice">
+          <input type="radio" id="av-limited" name="avail" value="limited">
+          <label for="av-limited">Limited Stock</label>
+        </div>
+        <div class="choice">
+          <input type="radio" id="av-out" name="avail" value="out">
+          <label for="av-out">Out of Stock</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pdate">Available from</label>
+        <input class="input" type="date" id="pdate" name="pdate">
+      </div>
+
+      <div class="field">
+        <label for="pnote">Short description</label>
+        <textarea class="input" id="pnote" name="pnote"></textarea>
+      </div>
+
+      <button class="btn" type="submit">Publish Produce</button>
+    </form>
+
+  </div>
+
+
+  <div class="footer">
+    <p>© 2026 Local Farmers Support Portal</p>
+    <p class="small">College project made with only HTML and CSS. All names, prices and villages are sample data.</p>
+  </div>
+
+</body>
+</html>

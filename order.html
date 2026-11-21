@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request | Local Farmers Support Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">🌾 Local Farmers Support Portal</div>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="farmers.html">Farmers</a>
+      <a href="produce.html">Produce</a>
+      <a href="order.html" class="active">Request</a>
+      <a href="ratings.html">Ratings</a>
+      <a href="join.html">Join as Farmer</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </div>
+
+  <div class="page-title">
+    <h1>Send a Request</h1>
+    <p>Fill this form and the farmer will contact you to confirm.</p>
+  </div>
+
+  <div class="container">
+
+    <form class="form-box" action="thanks.html" method="get">
+      <h2>Request Form</h2>
+
+      <div class="field">
+        <label for="name">Your name</label>
+        <input class="input" type="text" id="name" name="name" required>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number</label>
+        <input class="input" type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="field">
+        <label for="item">Produce</label>
+        <select class="input" id="item" name="item">
+          <option>Tomatoes - ₹30 per kg (Gurmeet Singh)</option>
+          <option>Potatoes - ₹20 per kg (Gurmeet Singh)</option>
+          <option>Spinach - ₹25 per kg (Meena Kumari)</option>
+          <option>Guava - ₹60 per kg (Harbans Lal)</option>
+          <option>Kinnow - ₹50 per kg (Harbans Lal)</option>
+          <option>Basmati Rice - ₹90 per kg (Balwinder Kaur)</option>
+          <option>Wheat - ₹28 per kg (Balwinder Kaur)</option>
+          <option>Moong Dal - ₹110 per kg (Balwinder Kaur)</option>
+          <option>Fresh Milk - ₹55 per litre (Sunita Devi)</option>
+          <option>Desi Ghee - ₹650 per kg (Sunita Devi)</option>
+          <option>Honey - ₹400 per kg (Ravi Kumar)</option>
+          <option>Jaggery (Gur) - ₹70 per kg (Ravi Kumar)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="qty">Quantity needed</label>
+        <input class="input" type="number" id="qty" name="qty" min="1" required>
+      </div>
+
+      <div class="field">
+        <label>How do you want to receive it?</label>
+        <div class="choice">
+          <input type="radio" id="pickup" name="mode" value="pickup" checked>
+          <label for="pickup">I will pick it up from the farm</label>
+        </div>
+        <div class="choice">
+          <input type="radio" id="delivery" name="mode" value="delivery">
+          <label for="delivery">Home delivery</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="date">Date needed</label>
+        <input class="input" type="date" id="date" name="date" required>
+      </div>
+
+      <div class="field">
+        <label for="address">Address (for delivery)</label>
+        <textarea class="input" id="address" name="address"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="note">Note for the farmer</label>
+        <textarea class="input" id="note" name="note"></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send Request</button>
+    </form>
+
+    <h2 class="section-title">How a Request Moves</h2>
+    <div class="grid">
+      <div class="card center">
+        <h3>Request #101</h3>
+        <p>Tomatoes, 10 kg</p>
+        <span class="status yellow">Pending</span>
+        <p class="small">Waiting for the farmer to reply.</p>
+      </div>
+      <div class="card center">
+        <h3>Request #102</h3>
+        <p>Kinnow, 5 kg</p>
+        <span class="status blue">Accepted</span>
+        <p class="small">Farmer has confirmed. Pickup tomorrow.</p>
+      </div>
+      <div class="card center">
+        <h3>Request #103</h3>
+        <p>Fresh Milk, 2 litre</p>
+        <span class="status green">Completed</span>
+        <p class="small">Delivered. You can now <a href="ratings.html">rate the farmer</a>.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="footer">
+    <p>© 2026 Local Farmers Support Portal</p>
+    <p class="small">College project made with only HTML and CSS. All names, prices and villages are sample data.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratings | Local Farmers Support Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">🌾 Local Farmers Support Portal</div>
+    <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="farmers.html">Farmers</a>
+      <a href="produce.html">Produce</a>
+      <a href="order.html">Request</a>
+      <a href="ratings.html" class="active">Ratings</a>
+      <a href="join.html">Join as Farmer</a>
+      <a href="admin.html">Admin</a>
+    </div>
+  </div>
+
+  <div class="page-title">
+    <h1>Ratings and Reviews</h1>
+    <p>See how customers rate our farmers, then add your own review.</p>
+  </div>
+
+  <div class="container">
+
+    <h2 class="section-title">Average Rating</h2>
+    <div class="grid">
+      <div class="card center">
+        <h3>Gurmeet Singh</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>4.8</strong> out of 5</p>
+      </div>
+
+      <div class="card center">
+        <h3>Sunita Devi</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>4.6</strong> out of 5</p>
+      </div>
+
+      <div class="card center">
+        <h3>Harbans Lal</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>4.7</strong> out of 5</p>
+      </div>
+
+      <div class="card center">
+        <h3>Meena Kumari</h3>
+        <p class="stars">★★★★★</p>
+        <p><strong>4.9</strong> out of 5</p>
+      </div>
+
+      <div class="card center">
+        <h3>Balwinder Kaur</h3>
+        <p class="stars">★★★★☆</p>
+        <p><strong>4.5</strong> out of 5</p>
+      </div>
+
+      <div class="card center">
+        <h3>Ravi Kumar</h3>
+        <p class="stars">★★★★☆</p>
+        <p><strong>4.4</strong> out of 5</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Latest Reviews</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Meena Kumari</h3>
+        <p class="stars">★★★★★</p>
+        <p class="review">The spinach was so fresh. You can really taste the difference with organic.</p>
+        <p class="small">- Anita, customer</p>
+      </div>
+
+      <div class="card">
+        <h3>Gurmeet Singh</h3>
+        <p class="stars">★★★★★</p>
+        <p class="review">Tomatoes were ripe and the price was fair. Picked up in 5 minutes.</p>
+        <p class="small">- Rohit, customer</p>
+      </div>
+
+      <div class="card">
+        <h3>Harbans Lal</h3>
+        <p class="stars">★★★★☆</p>
+        <p class="review">Sweet kinnow and guava. Packing could be a little better.</p>
+        <p class="small">- Priya, customer</p>
+      </div>
+
+      <div class="card">
+        <h3>Sunita Devi</h3>
+        <p class="stars">★★★★★</p>
+        <p class="review">Milk reached before 7 am every day. Very reliable.</p>
+        <p class="small">- Manpreet, customer</p>
+      </div>
+
+      <div class="card">
+        <h3>Balwinder Kaur</h3>
+        <p class="stars">★★★★☆</p>
+        <p class="review">Good quality basmati. Delivery came one day late but she informed me.</p>
+        <p class="small">- Kunal, customer</p>
+      </div>
+
+      <div class="card">
+        <h3>Ravi Kumar</h3>
+        <p class="stars">★★★★☆</p>
+        <p class="review">Honey is pure and thick. Will order again for winter.</p>
+        <p class="small">- Seema, customer</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Rate a Farmer</h2>
+    <form class="form-box" action="thanks.html" method="get">
+
+      <div class="field">
+        <label for="who">Your name</label>
+        <input class="input" type="text" id="who" name="who" required>
+      </div>
+
+      <div class="field">
+        <label for="farmer">Farmer</label>
+        <select class="input" id="farmer" name="farmer">
+          <option>Gurmeet Singh (Rampur)</option>
+          <option>Sunita Devi (Rampur)</option>
+          <option>Harbans Lal (Sundarpur)</option>
+          <option>Meena Kumari (Sundarpur)</option>
+          <option>Balwinder Kaur (Kishanpura)</option>
+          <option>Ravi Kumar (Kishanpura)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="stars">Rating</label>
+        <select class="input" id="stars" name="stars">
+          <option>★★★★★ - Excellent</option>
+          <option>★★★★☆ - Good</option>
+          <option>★★★☆☆ - Average</option>
+          <option>★★☆☆☆ - Poor</option>
+          <option>★☆☆☆☆ - Very poor</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="comment">Your review</label>
+        <textarea class="input" id="comment" name="comment" required></textarea>
+      </div>
+
+      <button class="btn" type="submit">Submit Review</button>
+    </form>
+
+  </div>
+
+
+  <div class="footer">
+    <p>© 2026 Local Farmers Support Portal</p>
+    <p class="small">College project made with only HTML and CSS. All names, prices and villages are sample data.</p>
+  </div>
+
+</body>
+</html>

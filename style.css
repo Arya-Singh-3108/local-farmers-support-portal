@@ -1,0 +1,517 @@
+/* ---------- 1. BASICS (box-sizing, font, color, background) ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f1f8e9;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: #1b5e20;
+}
+
+a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+
+/* ---------- 2. HEADER AND NAVIGATION (flexbox) ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e7d32;
+  padding: 15px 5%;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px #1b5e20;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  color: white;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: #1b5e20;
+}
+
+.nav a.active {
+  background-color: #1b5e20;
+}
+
+
+/* ---------- 3. HERO SECTION (background-image, vh, animation) ---------- */
+.hero {
+  height: 60vh;
+  background-image: url(images/hero.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  color: white;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+  text-shadow: 3px 3px 5px #333333;
+  animation: slidein 1.2s;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px #333333;
+}
+
+.hero-buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.hero .btn {
+  width: 200px;
+  margin: 10px;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-40px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- 4. PAGE TITLE BAR AND LAYOUT ---------- */
+.page-title {
+  background-color: #c8e6c9;
+  text-align: center;
+  padding: 30px 5%;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.page-title p {
+  margin: 5px 0 0 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+
+/* ---------- 5. GRID LAYOUT ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* ---------- 6. CARDS (box model, position, hover) ---------- */
+.card {
+  position: relative;
+  background-color: white;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 8px #bbbbbb;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #c8e6c9;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emoji {
+  font-size: 3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e65100;
+}
+
+.stars {
+  color: #f9a825;
+  font-size: 1.2rem;
+}
+
+.review {
+  font-style: italic;
+}
+
+.step-no {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto;
+}
+
+.space-top {
+  margin-top: 30px;
+}
+
+.big-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+
+/* ---------- 7. BADGES AND STATUS (position absolute, z-index) ---------- */
+/* .corner puts a badge in the top-right corner of its card (card is position: relative) */
+.corner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.status {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.green {
+  background-color: #2e7d32;
+}
+
+.yellow {
+  background-color: #f9a825;
+  color: #333333;
+}
+
+.red {
+  background-color: #c62828;
+}
+
+.blue {
+  background-color: #1565c0;
+}
+
+
+/* ---------- 8. BUTTONS (hover, transition, transform scale) ---------- */
+.btn {
+  display: block;
+  width: 100%;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #f57c00;
+  transform: scale(1.05);
+}
+
+.btn-yellow {
+  background-color: #f9a825;
+  color: #333333;
+}
+
+.btn-small {
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: #f57c00;
+  color: white;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px #666666;
+  transition: transform 0.3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.pulse {
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+
+/* ---------- 9. QUICK LINKS (browse by category / village) ---------- */
+.quick-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  background-color: white;
+  border: 1px solid #2e7d32;
+  border-radius: 20px;
+  padding: 6px 16px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.quick-links a:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+
+
+/* ---------- 10. FORMS ---------- */
+.form-box {
+  width: 60%;
+  margin: 0 auto 30px auto;
+  background-color: white;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 2px 2px 8px #bbbbbb;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.field label {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+textarea.input {
+  height: 90px;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.choice label {
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+
+.notice {
+  background-color: #fff8e1;
+  border: 1px solid #f9a825;
+  border-radius: 5px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+}
+
+
+/* ---------- 11. FOOTER ---------- */
+.footer {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 20px 5%;
+  margin-top: 30px;
+}
+
+.footer p {
+  margin: 3px 0;
+}
+
+
+/* ---------- 12. RESPONSIVE DESIGN (media queries) ---------- */
+
+/* Tablet and small laptop */
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav a {
+    margin: 3px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quick-links a {
+    margin: 4px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid,
+  .grid-2,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
