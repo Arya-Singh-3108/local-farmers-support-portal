@@ -33,10 +33,20 @@ a {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
   text-shadow: 2px 2px 3px #1b5e20;
+}
+
+.logo-img {
+  height: 45px;
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
+  margin-right: 12px;
 }
 
 .nav {
